@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Word | shukoushu</title>
+  <title>记录Git操作和命令 | shukoushu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="单词 shukoushu.github.io/assets/尚硅谷_Java编程语言每日单词.pdf 泛型">
+  <meta name="description" content="看到一篇Git操作与命令的文章，觉得不错，记录如下。  一、创建与合并分支  1、 从master分支创建dev分支并切换到dev分支 1git checkout mastergit checkout -b dev  其中，git checkout -b dev 等价于: 1git branch devgit checkout dev  （1） 1git branch  查看本地当前的分支，分支前">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Word">
-<meta property="og:url" content="http://yoursite.com/2019/08/24/Word/index.html">
+<meta property="og:title" content="记录Git操作和命令">
+<meta property="og:url" content="http://yoursite.com/2019/08/26/记录Git操作和命令/index.html">
 <meta property="og:site_name" content="shukoushu">
-<meta property="og:description" content="单词 shukoushu.github.io/assets/尚硅谷_Java编程语言每日单词.pdf 泛型">
+<meta property="og:description" content="看到一篇Git操作与命令的文章，觉得不错，记录如下。  一、创建与合并分支  1、 从master分支创建dev分支并切换到dev分支 1git checkout mastergit checkout -b dev  其中，git checkout -b dev 等价于: 1git branch devgit checkout dev  （1） 1git branch  查看本地当前的分支，分支前">
 <meta property="og:locale" content="cn">
-<meta property="og:updated_time" content="2019-09-07T13:47:25.684Z">
+<meta property="og:updated_time" content="2019-11-04T05:20:42.991Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Word">
-<meta name="twitter:description" content="单词 shukoushu.github.io/assets/尚硅谷_Java编程语言每日单词.pdf 泛型">
+<meta name="twitter:title" content="记录Git操作和命令">
+<meta name="twitter:description" content="看到一篇Git操作与命令的文章，觉得不错，记录如下。  一、创建与合并分支  1、 从master分支创建dev分支并切换到dev分支 1git checkout mastergit checkout -b dev  其中，git checkout -b dev 等价于: 1git branch devgit checkout dev  （1） 1git branch  查看本地当前的分支，分支前">
   
     <link rel="alternative" href="/atom.xml" title="shukoushu" type="application/atom+xml">
   
@@ -154,30 +154,182 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Word" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-记录Git操作和命令" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Word
+      记录Git操作和命令
     </h1>
   
 
         
-        <a href="/2019/08/24/Word/" class="archive-article-date">
-  	<time datetime="2019-08-24T10:17:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-24</time>
+        <a href="/2019/08/26/记录Git操作和命令/" class="archive-article-date">
+  	<time datetime="2019-08-26T10:17:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-26</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><a href="https://shukoushu.github.io/assets/尚硅谷_Java编程语言每日单词.pdf" target="_blank" rel="noopener">单词</a></p>
-<p>shukoushu.github.io/assets/尚硅谷_Java编程语言每日单词.pdf</p>
-<p><a href="https://blog.csdn.net/s10461/article/details/53941091" target="_blank" rel="noopener">泛型</a></p>
+        <p>看到一篇Git操作与命令的文章，觉得不错，记录如下。</p>
+<p> <strong>一、创建与合并分支</strong> </p>
+<p><strong>1、 从master分支创建dev分支并切换到dev分支</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout mastergit checkout -b dev</span><br></pre></td></tr></table></figure>
 
+<p>其中，git checkout -b dev 等价于:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch devgit checkout dev</span><br></pre></td></tr></table></figure>
+
+<p>（1）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch</span><br></pre></td></tr></table></figure>
+
+<p>查看本地当前的分支，分支前面带“*”表示当前分支，剩下的分支表示本地有的分支。</p>
+<p>（2）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git  branch  -a</span><br></pre></td></tr></table></figure>
+
+<p>查看远程全部的分支，白色的表示本地有的，红色的表示本地没有，仅在远程存在。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- more --&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>2、修改代码、提交代码（当前的操作是在dev分支上进行）</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git add a.html</span><br><span class="line">git commit -m &quot;提交文件a.html&quot;</span><br></pre></td></tr></table></figure>
+
+<p><strong>3、分支合并(将dev合并到master)</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout master</span><br><span class="line">git merge dev</span><br></pre></td></tr></table></figure>
+
+<p><strong>4、合并完成后，删除dev分支.(删除dev分支时，注意我们当前所在的分支不能是dev分支)</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -d dev</span><br></pre></td></tr></table></figure>
+
+<p><strong>5、删除后，查看分支(此时看不到dev分支了)</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch</span><br></pre></td></tr></table></figure>
+
+<p><strong>6、总结 ：工作中经常从master创建新的分支，具体操作如下:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">master创建新分支：</span><br><span class="line">git checkout master</span><br><span class="line">git checkout -b  issues1234  // 从master分支创建issues1234分支</span><br><span class="line">git push origin issues1234</span><br><span class="line">git add ..</span><br><span class="line">git commit -m &quot;***&quot;</span><br><span class="line">git push origin issues1234</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注意：将本地分支branch1推到远端的branch2操作步骤：</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin branch1:branch2</span><br></pre></td></tr></table></figure>
+
+<p><strong>7、删除分支：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git branch -D   issues1234  // 本地强制删除分支issues1234</span><br><span class="line">git push origin  :issues1234  // 推到远程</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p> <strong>二、解决冲突</strong> </p>
+<p><strong>1、发生冲突的文件</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEADCreating a new branch is quick &amp; simple.=======Creating a new branch is quick AND simple.&gt;&gt;&gt;&gt;&gt;&gt;&gt; feature1</span><br></pre></td></tr></table></figure>
+
+<p>其中，git使用 <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;，=======，&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>标记文件中自己和别人产生冲突的部分。</p>
+<p>在 <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;，=======</code>之间为自己的代码；=======，&gt;&gt;&gt;&gt;&gt;&gt;&gt;之间为别人的代码。</p>
+<p>如果保留自己的代码，将别人的代码删掉即可。</p>
+<p><strong>2、冲突解决后提交</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br><span class="line">git add ***</span><br><span class="line">git commit -m &quot;fix conflict&quot;</span><br><span class="line">git push origin 分支名</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p> <strong>三、Bug分支</strong> </p>
+<p><strong>1、储藏更改:将当前更改的代码储藏起来，等以后恢复使用</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git stash</span><br></pre></td></tr></table></figure>
+
+<p><strong>2、恢复储藏的代码</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git stash pop // 恢复的同时把stash内容删掉</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 通过 git stash list，查看本地所有的stash,如果我要恢复第一个就执行：git stash apply stash@&#123;0&#125;</span><br><span class="line">git stash apply  // 恢复stash，但是stash内容并不删除</span><br><span class="line">git stash drop // 在上面操作的基础上，以此来删除stash</span><br><span class="line">注： git stash list // 查看全部的stash列表</span><br></pre></td></tr></table></figure>
+
+<p><strong>3、将stash空间清空</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git stash clear</span><br></pre></td></tr></table></figure>
+
+<p><strong>4、git stash pop 和 git stash apply 区别</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">原来git stash pop stash@&#123;id&#125;命令会在执行后将对应的stash id 从stash list里删除，而 git stash apply stash@&#123;id&#125; 命令则会继续保存stash id。</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p> <strong>四、版本回退</strong> </p>
+<p><strong>1、回退至上一个版本</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard HEAD</span><br></pre></td></tr></table></figure>
+
+<p><strong>2、回退至指定版本</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard  版本号</span><br></pre></td></tr></table></figure>
+
+<p><strong>3、查看以往版本号(本地的commit)</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reflog</span><br></pre></td></tr></table></figure>
+
+<p><strong>4、查看各版本号及信息(所有的commit：本地commit + 其他同事的commit)</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p> <strong>五、撤销修改</strong> </p>
+<p><strong>1、撤销修改</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git  checkout -- a.html</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>分两种情况分析：</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">①： 还没有执行 git add 操作，执行上面的操作后，会恢复到和版本库中一模一样的版本状态。</span><br><span class="line">②： 执行了git add ，还没执行 git commit ,再执行上面的操作后，会恢复到git add 结束后的状态</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注：一旦执行了git commit -m “*”，就不能再使用上面的命令回退。</p>
+</blockquote>
+<p><strong>2、撤销新建文件</strong></p>
+<p>比如新建一个aa.html页面，并未执行git add ,即没有被git追踪，此时如果你想撤销新建动作，可执行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clean -f ../aa.html</span><br></pre></td></tr></table></figure>
+
+<p><strong>3、撤销新建文件夹</strong></p>
+<p>比如新建一个文件夹”demo”，并未执行git add ,即没有被git追踪，此时如果你想撤销新建动作，可执行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clean -df ./demo</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p> <strong>六、对已push版本进行回退</strong> </p>
+<p><strong>1、第一步：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard 版本号 // 本地回退到指定的版本</span><br></pre></td></tr></table></figure>
+
+<p><strong>2、第二步：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push  -f origin dev    //将远程的也回退到指定版本</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p> <strong>七、本地同步远程删除的分支</strong> </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git fetch origin -p  // 用来清除已经没有远程信息的分支，这样git branch -a 就不会拉取远程已经删除的分支了</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p> <strong>八、删掉未与远程分支对应的本地分支</strong> </p>
+<p>从gitlab上看不到的分支在本地可以通过git branch -a 查到，删掉没有与远程分支对应的本地分支：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git fetch -p</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p> <strong>九、查看远程库与本地分支的信息</strong> </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote show origin</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p> <strong>十、标签管理</strong> </p>
+<p><strong>1、给当前分支最新commit打标签</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git tag v1.0.0</span><br></pre></td></tr></table></figure>
+
+<p><strong>2、比如现在周五，要给周一某个commit打标签，应执行以下步骤：</strong></p>
+<p>（1）、查看log日志，找到相应的commit版本号</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git log --pretty=oneline --abbrev-commit</span><br><span class="line">// 显示如下commit，比如我想在 &quot;34372b05&quot;这个commit打标签44d2e20b fix bug34372b05 fix bug29554931 fix bug</span><br></pre></td></tr></table></figure>
+
+<p>（2）、给指定的commit打标签</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git tag v1.0.0 34372b05</span><br></pre></td></tr></table></figure>
+
+<p>（3）、创建的标签只存在本地，推至远程</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin v1.0.0</span><br></pre></td></tr></table></figure>
+
+<p>（4）、一次性推送未推至远程的本地标签</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin --tags</span><br></pre></td></tr></table></figure>
+
+<p>（5）、查询所有标签</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git tag</span><br></pre></td></tr></table></figure>
+
+<p>（6）、查询标签详细信息</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git show v1.0.0</span><br></pre></td></tr></table></figure>
+
+<p>（7）、删除本地标签</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git tag -d v1.0.0</span><br></pre></td></tr></table></figure>
+
+<p>（8）、删除远程标签</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// 先从本地删除git tag -d v1.0.0</span><br><span class="line">// 然后从远程删除git push origin :refs/tags/v1.0.0</span><br><span class="line">// 最后可以在gitlab上查看是否真正的删除了标签</span><br></pre></td></tr></table></figure>
+
+<p><strong>3、创建带有说明的标签，用-a指定标签名，-m指定说明文字</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// git  tag  -a  版本号  -m  说明信息  commit版本号git tag -a v1.0.0 -m &quot;version 1.0.0 released&quot; 34372b05(commit版本号)     </span><br><span class="line">// 查看标签详细信息git show v1.0.0</span><br></pre></td></tr></table></figure>
       
 
       
@@ -256,7 +408,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/24/Word/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/26/记录Git操作和命令/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -270,18 +422,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/08/26/记录Git操作和命令/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          记录Git操作和命令
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/08/23/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
+    <a href="/2019/08/24/Word/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Word</div>
       <i class="icon-circle-right"></i>
     </a>
   
