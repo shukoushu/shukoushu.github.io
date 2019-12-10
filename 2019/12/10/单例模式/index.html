@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | shukoushu</title>
+  <title>单例模式 | shukoushu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="shukoushu">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="一、单例模式概述单例模式定义很简单：一个类中能创建一个实例，所以称之为单例！ 那我们什么时候会用到单例模式呢？？  那我们想想既然一个类中只能创建一个实例了，那么可以说这是跟类的状态与对象无关的了。 频繁创建对象、管理对象是一件耗费资源的事，我们只需要创建一个对象来用就足够了！  二、编写单例模式的代码编写单例模式的代码其实很简单，就分了三步：  将构造函数私有化 在类的内部创建实例 提供获取唯一">
+<meta property="og:type" content="article">
+<meta property="og:title" content="单例模式">
+<meta property="og:url" content="http://yoursite.com/2019/12/10/单例模式/index.html">
 <meta property="og:site_name" content="shukoushu">
+<meta property="og:description" content="一、单例模式概述单例模式定义很简单：一个类中能创建一个实例，所以称之为单例！ 那我们什么时候会用到单例模式呢？？  那我们想想既然一个类中只能创建一个实例了，那么可以说这是跟类的状态与对象无关的了。 频繁创建对象、管理对象是一件耗费资源的事，我们只需要创建一个对象来用就足够了！  二、编写单例模式的代码编写单例模式的代码其实很简单，就分了三步：  将构造函数私有化 在类的内部创建实例 提供获取唯一">
 <meta property="og:locale" content="cn">
+<meta property="og:updated_time" content="2019-12-10T07:43:51.475Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="shukoushu">
+<meta name="twitter:title" content="单例模式">
+<meta name="twitter:description" content="一、单例模式概述单例模式定义很简单：一个类中能创建一个实例，所以称之为单例！ 那我们什么时候会用到单例模式呢？？  那我们想想既然一个类中只能创建一个实例了，那么可以说这是跟类的状态与对象无关的了。 频繁创建对象、管理对象是一件耗费资源的事，我们只需要创建一个对象来用就足够了！  二、编写单例模式的代码编写单例模式的代码其实很简单，就分了三步：  将构造函数私有化 在类的内部创建实例 提供获取唯一">
   
     <link rel="alternative" href="/atom.xml" title="shukoushu" type="application/atom+xml">
   
@@ -150,157 +154,201 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-单例模式" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      单例模式
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/10/单例模式/" class="archive-article-date">
+
+        
+        <a href="/2019/12/10/单例模式/" class="archive-article-date">
   	<time datetime="2019-12-10T06:34:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-10</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/10/单例模式/">单例模式</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="一、单例模式概述"><a href="#一、单例模式概述" class="headerlink" title="一、单例模式概述"></a>一、单例模式概述</h1><p>单例模式定义很简单：<strong>一个类中能创建一个实例</strong>，所以称之为单例！</p>
+<p>那我们什么时候会用到单例模式呢？？</p>
+<ul>
+<li>那我们想想既然一个类中只能创建一个实例了，那么可以说这是跟<strong>类的状态与对象无关</strong>的了。</li>
+<li><strong>频繁创建对象、管理对象是一件耗费资源的事</strong>，我们只需要创建一个对象来用就足够了！</li>
+</ul>
+<h1 id="二、编写单例模式的代码"><a href="#二、编写单例模式的代码" class="headerlink" title="二、编写单例模式的代码"></a>二、编写单例模式的代码</h1><p>编写单例模式的代码其实很简单，就分了三步：</p>
+<ul>
+<li><strong>将构造函数私有化</strong></li>
+<li><strong>在类的内部创建实例</strong></li>
+<li><strong>提供获取唯一实例的方法</strong></li>
+</ul>
+<h2 id="2-1饿汉式"><a href="#2-1饿汉式" class="headerlink" title="2.1饿汉式"></a>2.1饿汉式</h2><p>根据上面的步骤，我们就可以<strong>轻松完成创建单例对象</strong>了。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton1</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 1.将构造函数私有化，不可以通过new的方式来创建对象</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton1</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2.在类的内部创建自行实例</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Singleton1 singleton1 = <span class="keyword">new</span> Singleton1();</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 3.提供获取唯一实例的方法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton1 <span class="title">getSingleton1</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> singleton1;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
-          
+<p>这种代码我们称之为：“<strong>饿汉式</strong>”：</p>
+<ul>
+<li>一上来就创建对象了，<strong>如果该实例从始至终都没被使用过，则会造成内存浪费</strong>。</li>
+</ul>
+<a id="more"></a>
 
+<h2 id="2-2懒汉式"><a href="#2-2懒汉式" class="headerlink" title="2.2懒汉式"></a>2.2懒汉式</h2><p>既然说一上来就创建对象，如果没有用过会造成内存浪费：</p>
+<ul>
+<li>那么我们就设计<strong>用到的时候再创建对象</strong>！</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton2</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton2</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Singleton2 singleton2 = <span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton2 <span class="title">getJava3y</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (singleton2 == <span class="keyword">null</span>) &#123;</span><br><span class="line">            singleton2 = <span class="keyword">new</span> Singleton2();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> singleton2;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>上面的代码行不行？？在单线程环境下是行的，<strong>在多线程环境下就不行了</strong>！</p>
+<p>于是就有了如下写法：</p>
+<h2 id="2-3双重检查模式"><a href="#2-3双重检查模式" class="headerlink" title="2.3双重检查模式"></a>2.3双重检查模式</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton3</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton3</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">volatile</span> Singleton3 singleton3;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton3 <span class="title">getJava3y</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (singleton3 == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">synchronized</span> (Singleton3.class) &#123;</span><br><span class="line">                <span class="keyword">if</span>(singleton3 == <span class="keyword">null</span>)&#123;</span><br><span class="line">                	singleton3 = <span class="keyword">new</span> Singleton3();    </span><br><span class="line">                &#125;</span><br><span class="line">                </span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> singleton3;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>双重检查的写法其实是通过声明了 <code>volatile</code>和 <strong>双重加锁</strong>的方式实现了单例模式，有的人可能会问，为什么锁的内部还要再加一层判断，其实在考虑多线程同时进入了第一层 <code>if</code>判断中时，都在等待着锁的释放，但是释放之后其他线程已经进入了第一层，那么单例模式的结构就会被打乱了。</p>
+<h2 id="2-4静态内部类单例模式"><a href="#2-4静态内部类单例模式" class="headerlink" title="2.4静态内部类单例模式"></a>2.4静态内部类单例模式</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton4</span> </span>&#123; </span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span></span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton4 <span class="title">getSingletonInstance</span><span class="params">()</span></span>&#123;  </span><br><span class="line">        <span class="keyword">return</span> SingletonInstance.singleton4;  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">SingletonInstance</span> </span>&#123;  </span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Singleton4 singleton4 = <span class="keyword">new</span> Singleton4();  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>只有第一次调用getInstance方法时，虚拟机才加载 Inner 并初始化instance ，只有一个线程可以获得对象的初始化锁，其他线程无法进行初始化，保证对象的唯一性。</p>
+<h2 id="2-5枚举单例模式"><a href="#2-5枚举单例模式" class="headerlink" title="2.5枚举单例模式"></a>2.5枚举单例模式</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">enum</span> Singleton5 &#123;</span><br><span class="line">    INSTANCE;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton get <span class="title">Instance</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> Singleton.INSTANCE;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>优点防止多线程同步问题，而且还能防止反序列化重新创建新的对象。</p>
+<h1 id="三、总结"><a href="#三、总结" class="headerlink" title="三、总结"></a>三、总结</h1><p>总的来说单例模式写法有5种：</p>
+<ul>
+<li>饿汉式</li>
+<li>懒汉式</li>
+<li>双重检查模式</li>
+<li>静态内部类模式</li>
+<li>枚举模式</li>
+</ul>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/12/10/单例模式/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-w">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/04/上传代码/" class="archive-article-date">
-  	<time datetime="2019-11-04T13:05:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-04</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/11/04/上传代码/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">上传代码到github</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/04/上传代码/">上传代码到github</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/26/记录Git操作和命令/" class="archive-article-date">
-  	<time datetime="2019-08-26T10:17:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/26/记录Git操作和命令/">记录Git操作和命令</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/24/Word/" class="archive-article-date">
-  	<time datetime="2019-08-24T10:17:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/24/Word/">Word</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/23/hello-world/" class="archive-article-date">
-  	<time datetime="2019-08-23T10:43:13.445Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/23/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -323,8 +371,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

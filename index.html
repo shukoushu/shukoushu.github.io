@@ -152,6 +152,89 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-单例模式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/10/单例模式/">单例模式</a>
+    </h1>
+  
+
+        
+        <a href="/2019/12/10/单例模式/" class="archive-article-date">
+  	<time datetime="2019-12-10T06:34:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="一、单例模式概述"><a href="#一、单例模式概述" class="headerlink" title="一、单例模式概述"></a>一、单例模式概述</h1><p>单例模式定义很简单：<strong>一个类中能创建一个实例</strong>，所以称之为单例！</p>
+<p>那我们什么时候会用到单例模式呢？？</p>
+<ul>
+<li>那我们想想既然一个类中只能创建一个实例了，那么可以说这是跟<strong>类的状态与对象无关</strong>的了。</li>
+<li><strong>频繁创建对象、管理对象是一件耗费资源的事</strong>，我们只需要创建一个对象来用就足够了！</li>
+</ul>
+<h1 id="二、编写单例模式的代码"><a href="#二、编写单例模式的代码" class="headerlink" title="二、编写单例模式的代码"></a>二、编写单例模式的代码</h1><p>编写单例模式的代码其实很简单，就分了三步：</p>
+<ul>
+<li><strong>将构造函数私有化</strong></li>
+<li><strong>在类的内部创建实例</strong></li>
+<li><strong>提供获取唯一实例的方法</strong></li>
+</ul>
+<h2 id="2-1饿汉式"><a href="#2-1饿汉式" class="headerlink" title="2.1饿汉式"></a>2.1饿汉式</h2><p>根据上面的步骤，我们就可以<strong>轻松完成创建单例对象</strong>了。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton1</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 1.将构造函数私有化，不可以通过new的方式来创建对象</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton1</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2.在类的内部创建自行实例</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Singleton1 singleton1 = <span class="keyword">new</span> Singleton1();</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 3.提供获取唯一实例的方法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton1 <span class="title">getSingleton1</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> singleton1;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这种代码我们称之为：“<strong>饿汉式</strong>”：</p>
+<ul>
+<li>一上来就创建对象了，<strong>如果该实例从始至终都没被使用过，则会造成内存浪费</strong>。</li>
+</ul>
+        
+          <a class="article-more-a" href="/2019/12/10/单例模式/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/12/10/单例模式/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="w-上传代码" class="article article-type-w  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -326,9 +409,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><a href="https://shukoushu.github.io/assets/尚硅谷_Java编程语言每日单词.pdf" target="_blank" rel="noopener">单词</a></p>
-<p>shukoushu.github.io/assets/尚硅谷_Java编程语言每日单词.pdf</p>
-<p><a href="https://blog.csdn.net/s10461/article/details/53941091" target="_blank" rel="noopener">泛型</a></p>
+        <p><a href="https://blog.csdn.net/s10461/article/details/53941091" target="_blank" rel="noopener">泛型文章</a></p>
 
       
 
